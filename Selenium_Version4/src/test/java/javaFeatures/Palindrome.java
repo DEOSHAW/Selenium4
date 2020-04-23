@@ -20,7 +20,7 @@ public class Palindrome {
 		
 		String str1=new String(charArray);
 		if(str.equals(str1))
-			System.out.println("Palindrome String");
+			System.out.println("A Palindrome String");
 		else
 			System.out.println("Not a Palindrome String");
 		
