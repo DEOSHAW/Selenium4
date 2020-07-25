@@ -16,7 +16,7 @@ public class FileStream {
 		//Below code will read an existing file and copy that to a new file
 		File file=new File("D:/Stream/filestream.txt");
 		FileInputStream fis=new FileInputStream(file);
-		FileOutputStream fos=new FileOutputStream("D:/Stream/filestreamcopy.txt");
+		FileOutputStream fos=new FileOutputStream("D:/Stream/filestreamcopy.txt",true);
 		BufferedInputStream brin=new BufferedInputStream(fis); 
 		BufferedOutputStream brout=new BufferedOutputStream(fos);
 		int data;
@@ -24,7 +24,7 @@ public class FileStream {
 		{
 			count++;
 			System.out.println("Data is: "+(char)data);
-			
+			//brout.write("");
 			brout.write(data);
 		}
 		brin.close();

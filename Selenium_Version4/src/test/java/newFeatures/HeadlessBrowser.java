@@ -1,5 +1,6 @@
 package newFeatures;
 
+import java.util.Collections;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.JavascriptExecutor;
@@ -12,10 +13,10 @@ public class HeadlessBrowser {
 	public static void main(String[] args) {
 		    
 		  
-		  System.setProperty("webdriver.chrome.driver", "D:\\chromedriver.exe");
+		  System.setProperty("webdriver.chrome.driver", "C:\\Users\\Bishal\\chromedriver.exe");
 		  ChromeOptions options = new ChromeOptions();
-          options.addArguments("headless");
           options.addArguments("window-size=1200x600");
+          options.addArguments("--headless");
           WebDriver driver = new ChromeDriver(options);
 		  driver.manage().window().maximize();
           driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
@@ -23,6 +24,7 @@ public class HeadlessBrowser {
 		  JavascriptExecutor js=(JavascriptExecutor)driver;
 		  String Text=(String) js.executeScript("return document.getElementById('form1').value");
 		  System.out.println("Text is: "+Text);
+		  driver.close();
 
 	}
 
