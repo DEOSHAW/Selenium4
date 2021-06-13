@@ -1,5 +1,8 @@
 package newFeatures;
 
+import java.io.File;
+
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -11,16 +14,16 @@ public class NewWindowFeature {
 	
 	public static void main(String args[]) throws InterruptedException
 	{   WebDriver driver;
-		System.setProperty("webdriver.chrome.driver", "D:\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+File.separator+"chromedriver.exe");
 		driver=new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://www.google.com");
 		String parentWindow=driver.getWindowHandle();
 		Thread.sleep(2000);
 		//driver.findElement(RelativeLocator.withTagName("input").below(By.xpath("//*[@jsname='vdLsw']"))).sendKeys("Selenium");
-		WebDriver newTab=driver.switchTo().newWindow(WindowType.TAB);
+		WebDriver newTab=driver.switchTo().newWindow(WindowType.WINDOW);
 		newTab.navigate().to("https://www.ultimatix.net");
-		//newTab.manage().window().maximize();
+		newTab.manage().window().maximize();
 		Thread.sleep(5000);
 		newTab.findElement(By.xpath("//*[@id='form1']")).sendKeys("856520");
 		Thread.sleep(5000);
@@ -32,6 +35,7 @@ public class NewWindowFeature {
 		driver.findElement(By.xpath("//*[@name='q']")).sendKeys(Keys.ENTER);
 		Thread.sleep(2000);
 		driver.close();
+	
 		
 		
 		
