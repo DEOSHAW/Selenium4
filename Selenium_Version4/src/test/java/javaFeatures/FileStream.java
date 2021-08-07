@@ -14,9 +14,9 @@ public class FileStream {
 	public static void main(String args[]) throws IOException
 	{  int count=0;
 		//Below code will read an existing file and copy that to a new file
-		File file=new File("D:/Stream/filestream.txt");
+		File file=new File(System.getProperty("user.dir")+File.separator+"Data.txt");
 		FileInputStream fis=new FileInputStream(file);
-		FileOutputStream fos=new FileOutputStream("D:/Stream/filestreamcopy.txt",true);
+		FileOutputStream fos=new FileOutputStream(System.getProperty("user.dir")+File.separator+"DataOutput.txt",true);
 		BufferedInputStream brin=new BufferedInputStream(fis); 
 		BufferedOutputStream brout=new BufferedOutputStream(fos);
 		int data;
