@@ -1,5 +1,7 @@
 package newFeatures;
 
+import java.io.File;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -14,7 +16,7 @@ public class TypeInCaps {
 	
 	public static void main(String args[]) throws InterruptedException
 	{
-		System.setProperty("webdriver.chrome.driver", "D:\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+File.separator+"chromedriver.exe");
 		ChromeOptions options=new ChromeOptions();
 		options.addArguments("disable-infobars");
 		options.addArguments("--start-maximized");
