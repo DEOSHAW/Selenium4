@@ -36,7 +36,7 @@ public class NewWindowFeature {
 		driver.findElement(By.xpath("//*[@name='q']")).sendKeys("Selenium4");
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//*[@name='q']")).sendKeys(Keys.ENTER);
-		FileUtils.copyFile(srcFile, new File(System.getProperty("user.dir")+File.separator+"Logo.png"));
+		FileUtils.copyFile(srcFile, new File(System.getProperty("user.dir")+File.separator+"Image.png"));
 		Thread.sleep(2000);
 		driver.close();
 	
