@@ -7,7 +7,7 @@ public class Palindrome {
 		String str="RADAR";
 		int length=str.length();
 		char[] charArray=new char[length];
-		System.out.println(length);
+		//System.out.println(length);
 		int j=0;
 		for(int i=(length-1);i>=0;i--)
 		{
