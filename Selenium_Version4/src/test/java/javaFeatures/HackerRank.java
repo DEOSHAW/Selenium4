@@ -8,6 +8,7 @@ public class HackerRank {
 	{
 		 
 		System.out.println(String.format("%.12f", 9.5));
+		System.out.println(String.format("%03d", 9));
 		
 		    
 	}
