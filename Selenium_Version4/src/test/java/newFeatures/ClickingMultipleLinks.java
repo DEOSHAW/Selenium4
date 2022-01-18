@@ -1,5 +1,6 @@
 package newFeatures;
 
+import java.time.Duration;
 import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -20,7 +21,7 @@ public class ClickingMultipleLinks {
 		WebDriver driver=new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://www.amazon.com");
-		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
 		WebElement LinkArray=driver.findElement(By.xpath("//*[normalize-space(text())='Make Money with Us']/parent::div"));
 		List<WebElement> allLinks=LinkArray.findElements(By.tagName("a"));
 		String input=Keys.chord(Keys.CONTROL,Keys.ENTER);
