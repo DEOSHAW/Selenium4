@@ -16,7 +16,8 @@ public class SetDemo {
         	Set<Integer> keys=map.keySet();
         	for(Integer i:keys)
         	{
-        		System.out.println(map.get(i));
+        		//System.out.println(map.get(i));
+        		System.out.println(i);
         	
          }
 
