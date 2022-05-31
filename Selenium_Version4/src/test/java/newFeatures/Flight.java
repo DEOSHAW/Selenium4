@@ -1,5 +1,6 @@
 package newFeatures;
 
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -23,7 +24,7 @@ public class Flight {
 		
 		driver.get("https://makemytrip.com");
 		//driver.findElement(By.id("fromCity")).clear();
-		driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
 		driver.findElement(By.id("fromCity")).sendKeys("BOM");
 		//Thread.sleep(2000L);
 		Actions action=new Actions(driver);
