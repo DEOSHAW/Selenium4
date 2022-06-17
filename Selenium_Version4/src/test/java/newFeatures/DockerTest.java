@@ -15,7 +15,7 @@ public class DockerTest {
 	public static void main(String args[]) throws Exception
 	{
 		DesiredCapabilities cap=new DesiredCapabilities();
-		cap.setBrowserName(BrowserType.CHROME);
+		cap.setBrowserName(BrowserType.FIREFOX);
 		WebDriver driver=new RemoteWebDriver(new URL("http://localhost:4545/wd/hub"),cap);
 		driver.get("https://www.google.com");
 		driver.findElement(By.name("q")).sendKeys("Docker");
