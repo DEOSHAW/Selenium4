@@ -17,7 +17,7 @@ public class Flight {
 
 		public static void main (String[] args) throws InterruptedException
 		{
-			WebDriverManager.chromedriver().setup();
+		WebDriverManager.chromedriver().version("103.0.5060.134").setup();
 		//System.setProperty("webdriver.chrome.driver", "C:/Users/Bishal/chromedriver.exe");
 		WebDriver driver=new ChromeDriver();
 		driver.manage().window().maximize();
