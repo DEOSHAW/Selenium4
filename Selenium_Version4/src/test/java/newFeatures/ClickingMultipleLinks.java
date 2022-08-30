@@ -1,5 +1,6 @@
 package newFeatures;
 
+import java.io.File;
 import java.time.Duration;
 import java.util.Iterator;
 import java.util.List;
@@ -17,7 +18,7 @@ public class ClickingMultipleLinks {
 	
 	public static void main(String args[]) throws InterruptedException
 	{
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Bishal\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+File.separator+"chromedriver.exe");
 		WebDriver driver=new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://www.amazon.com");
