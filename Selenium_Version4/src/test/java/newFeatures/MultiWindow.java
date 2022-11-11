@@ -11,7 +11,7 @@ public class MultiWindow {
 	public static void main(String args[])
 	{
 		
-		System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+File.separator+"chromedriver.exe");
+		//System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+File.separator+"chromedriver.exe");
 		WebDriver driver=new ChromeDriver();
 		driver.get("https://www.ultimatix.net");
 		WebDriver driver1=new ChromeDriver();

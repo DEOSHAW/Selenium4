@@ -3,7 +3,6 @@ package javaFeatures;
 import java.util.Map;
 import java.util.Set;
 
-import org.openqa.selenium.interactions.SendKeysAction;
 
 public class EnvVariableDemo {
 	

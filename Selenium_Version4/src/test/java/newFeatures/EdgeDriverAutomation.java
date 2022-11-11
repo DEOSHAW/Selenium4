@@ -8,13 +8,14 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 
 public class EdgeDriverAutomation {
 	
 	public static void main(String args[])
 	{
 		System.setProperty("webdriver.edge.driver", System.getProperty("user.dir")+File.separator+"msedgedriver.exe");
-		ChromeOptions options=new ChromeOptions();
+		EdgeOptions options=new EdgeOptions();
 		options.addArguments("--start-maximized");
 		WebDriver driver=new EdgeDriver(options);
 		driver.get("https://investors.falabella.com/English/about-us/default.aspx");
