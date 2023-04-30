@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -21,6 +22,15 @@ public class AddTocart {
 		List<WebElement> products=driver.findElements(By.cssSelector("h4.product-name"));
 		for(WebElement prod:products)
 		{
+			
+			try
+			{
+				
+			}
+			catch(WebDriverException e)
+			{
+				
+			}
 			if(k==Commodities.length)
 			{
 				break;
