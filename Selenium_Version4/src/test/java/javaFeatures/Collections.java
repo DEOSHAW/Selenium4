@@ -35,6 +35,20 @@ public class Collections {
 		}
 		
 		
+		ArrayList<Integer> al=new ArrayList<Integer>();
+		al.add(23);
+		al.add(4);
+		al.add(45);
+		al.add(7);
+		
+		
+		java.util.Collections.sort(al);
+		
+		System.out.println(al);
+		
+		
+		
+		
 	}
 
 }
