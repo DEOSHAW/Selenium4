@@ -15,7 +15,7 @@ public class AddTocart {
 		int i=0;
 		int k=0;
 		String[] Commodities= {"Cucumber","Brocolli","Beetroot"};
-		System.setProperty("webdriver.chrome.driver", "D:\\chromedriver.exe");
+		//System.setProperty("webdriver.chrome.driver", "D:\\chromedriver.exe");
 		WebDriver driver=new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://rahulshettyacademy.com/seleniumPractise/");

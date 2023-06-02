@@ -16,7 +16,7 @@ public class NewWindowFeature {
 	
 	public static void main(String args[]) throws InterruptedException, IOException
 	{   WebDriver driver;
-		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+File.separator+"chromedriver.exe");
+		//System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+File.separator+"chromedriver.exe");
 		driver=new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://www.google.com");

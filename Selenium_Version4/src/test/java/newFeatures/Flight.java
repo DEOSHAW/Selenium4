@@ -27,6 +27,7 @@ public class Flight {
 		//driver.findElement(By.id("fromCity")).clear();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
 		driver.findElement(By.id("fromCity")).sendKeys("BOM");
+		
 		//Thread.sleep(2000L);
 		Actions action=new Actions(driver);
 		action.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).build().perform();
