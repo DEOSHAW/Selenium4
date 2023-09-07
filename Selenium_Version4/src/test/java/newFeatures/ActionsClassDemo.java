@@ -3,7 +3,9 @@ package newFeatures;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
@@ -16,8 +18,19 @@ public class ActionsClassDemo
 		driver.get("https://www.majorleaguepickleball.net/");
 		driver.manage().window().maximize();
 		Actions actions=new Actions(driver);
-		driver.findElement(By.xpath("//a[@aria-label='Close Popup']//*[local-name()='svg']")).click();
-		WebElement League=driver.findElement(By.xpath("(//a[contains(text(),'League')])[1]"));
+		JavascriptExecutor js=(JavascriptExecutor)driver;
+		js.executeScript("arguments[0].click();", driver.findElement(By.xpath("//button[contains(text(),'Accept')]")));
+		Thread.sleep(1000);
+		WebElement closeButton=driver.findElement(By.xpath("//a[@aria-label='Close Popup']//*[local-name()='svg']"));
+		try
+		{
+		closeButton.click();
+		}
+		catch(WebDriverException e)
+		{
+			e.printStackTrace();
+		}
+        WebElement League=driver.findElement(By.xpath("(//a[contains(text(),'League')])[1]"));
 		actions.moveToElement(League)
 		.click(driver.findElement(By.xpath("(//a[contains(text(),'League Standings')])[1]"))).perform();
 		
