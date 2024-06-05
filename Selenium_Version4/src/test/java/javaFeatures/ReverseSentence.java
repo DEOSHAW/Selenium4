@@ -6,24 +6,31 @@ public class ReverseSentence {
 	
 	public static void main(String args[])
 	{
-		System.out.println("Enter a Sentence");
+		System.out.println("Enter a Sentence: ");
 		Scanner scan=new Scanner(System.in);
 		String st=scan.nextLine();
-		
-		String[] wd=st.split("\\s");
-		String[] rwd=new String[wd.length];
-		
-		int i=0;
-		for(int j=wd.length-1;j>=0;j--)
+		String revSt="";
+		String[] Word=st.split("\\s");
+		for(int i=0;i<Word.length;i++)
 		{
-			rwd[i]=wd[j];
-			i++;
+			revSt+=reverseString(Word[i])+" ";
 		}
+		System.out.println(revSt);
 		
-		for(String word:rwd)
+		
+		
+		
+	}
+	
+	static String reverseString(String st)
+	{
+		String revSt="";
+		for(int i=st.length()-1;i>=0;i--)
 		{
-			System.out.print(word+" ");
+			revSt+=st.charAt(i);
 		}
+		return revSt;
+		
 	}
 
 }
