@@ -13,33 +13,27 @@ public class FileReadWrite
 	public static void main(String[] args) throws IOException
 	{
 		
+		
 		File file=new File(System.getProperty("user.dir")+File.separator+"Data.txt");
 		FileReader reader=new FileReader(file);
-		BufferedReader buffReader=new BufferedReader(reader);
-		
-		File file1=new File(System.getProperty("user.dir")+File.separator+"DataOutput.txt");
-		FileWriter fw=new FileWriter(file1);
-		BufferedWriter bw=new BufferedWriter(fw);
+		BufferedReader br=new BufferedReader(reader);
+		StringBuilder sb=new StringBuilder();
 		String line="";
-		while((line=buffReader.readLine())!=null)
+		while((line=br.readLine())!=null)
 		{
-			
 			System.out.println(line);
-			
-			bw.write(line.replaceAll(" ", "t"));
-			
-			bw.write("\n");
-			
-			
+			sb.append(line);
+			sb.append("\n");
 		}
-		
-		buffReader.close();
+		br.close();
 		reader.close();
+		
+		File fileWrite=new File(System.getProperty("user.dir")+File.separator+"DataWrite.txt");
+		FileWriter fw=new FileWriter(fileWrite,true);
+		BufferedWriter bw=new BufferedWriter(fw);
+		bw.write(sb.toString());
 		bw.close();
 		fw.close();
-		
-	
-		
 		
 		
 	}
