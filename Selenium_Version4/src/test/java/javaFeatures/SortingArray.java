@@ -5,7 +5,7 @@ public class SortingArray
 	
 	public static void main(String[] args)
 	{
-		int[] X= {44,55,30,25,18,12,8,6,4,1,2};
+		int[] X= {12,100,9,5,33};
 		int temp=0;
 		for(int i=0;i<X.length;i++)
 		{
@@ -16,6 +16,7 @@ public class SortingArray
 					temp=X[i];
 					X[i]=X[j];
 					X[j]=temp;
+					
 				}
 			}
 		}
