@@ -21,5 +21,6 @@ public class CountVowelsAndConsonants
 	   }
 	   cCount=totalLength-vCount;
 	   System.out.println("Vowels: "+vCount+" "+"Consonants: "+cCount);
+	   scan.close();
    }
 }

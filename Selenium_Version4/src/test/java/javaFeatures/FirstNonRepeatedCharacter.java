@@ -33,5 +33,6 @@ public class FirstNonRepeatedCharacter {
 				break;
 			}
 		}
+		scan.close();
 	}
 }

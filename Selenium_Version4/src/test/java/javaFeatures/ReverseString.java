@@ -17,5 +17,6 @@ public class ReverseString
 		}
 		
 		System.out.println("Reverse of "+str+" is: "+revStr);
+		scan.close();
 	}
 }
